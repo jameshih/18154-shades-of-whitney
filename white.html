@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>18154 Shades of Whitney</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <script type="text/javascript" src ="data.json"></script>
+  <style media="screen">
+  body{
+    font-family: 'Nunito', sans-serif;
+  }
+  div{
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+  }
+  h1{
+    margin-bottom: 5%;
+  }
+  #bt {
+    outline: none;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+    border: 2px solid #555555;
+  }
+  #bt:hover {
+    background-color: white;
+    color: black;
+  }
+  </style>
+
+</head>
+<body>
+  <div>
+    <h1 id="header"></h1>
+    <button id="bt" onclick="postImg()"></button>
+  </div>
+
+  <script type="text/javascript">
+  document.getElementById('header').innerHTML = data.length + ' Shades of Whitney';
+  document.getElementById('bt').innerHTML = 'Show me';
+  function postImg(){
+    document.getElementById('bt').style ='';
+    document.getElementById('bt').innerHTML = '<img id="display"/>';
+    var i = Math.floor((Math.random() * 18153));
+    document.getElementById('header').innerHTML = i + 'th Shade of Whitney';
+    document.getElementById('display').src='http://collectionimages.whitney.org/standard/'+data[i]+'/largepage.jpg';
+    //document.getElementById('display').src='/img/'+data[i]+'/largepage.jpg';
+    console.log(i,data[i])
+  }
+  </script>
+</body>
+</html>

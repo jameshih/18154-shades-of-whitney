@@ -7,12 +7,35 @@
   <script type="text/javascript" src ="data.json"></script>
   <style media="screen">
   body{
+    color: black;
+    font-size: 25px;
     font-family: 'Nunito', sans-serif;
+    background: black;
   }
+  #a {
+    visibility: visible;
+    z-index: -1;
+  }
+
   div{
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    z-index: 1;
     display: block;
+    position: fixed;
     text-align: center;
     margin-top: 10%;
+  }
+
+  #header{
+    background: rgba(225, 225, 225, .8);
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5%;
   }
 
   h1{
@@ -22,30 +45,34 @@
   #bt {
     outline: none;
     border: none;
-    color: white;
+    color: black;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: #555555;
-    color: white;
-    border: 2px solid #555555;
+    background-color: white;
   }
 
   #bt:hover {
-    background-color: white;
-    color: black;
+    background-color: #555555;
+    color: white;
   }
 
   </style>
 
 </head>
-<body>
+<body onscroll="showA()">
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290931986/in/dateposted-public/" title="1-2970"><img src="https://c1.staticflickr.com/4/3762/33290931986_6b1a8cc970_o.jpg" width="7040" height="6804" alt="1-2970"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517467083/in/dateposted-public/" title="2971-5940"><img src="https://c1.staticflickr.com/4/3938/32517467083_eb8dc5bdbc_o.jpg" width="7040" height="6804" alt="2971-5940"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517466273/in/dateposted-public/" title="5941-8910"><img src="https://c1.staticflickr.com/1/719/32517466273_9467f7dd21_o.jpg" width="7040" height="6804" alt="5941-8910"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517465193/in/dateposted-public/" title="8911-11880"><img src="https://c1.staticflickr.com/1/625/32517465193_2c244133a2_o.jpg" width="7040" height="6804" alt="8911-11880"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517464273/in/dateposted-public/" title="11881-14850"><img src="https://c1.staticflickr.com/4/3923/32517464273_510209d629_o.jpg" width="7040" height="6804" alt="11881-14850"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290928526/in/dateposted-public/" title="14851-17820"><img src="https://c1.staticflickr.com/4/3913/33290928526_a1b7a313e6_o.jpg" width="7040" height="6804" alt="14851-17820"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <div>
     <h1 id="header"></h1>
     <button id="bt" onclick="postImg()"></button>
@@ -62,7 +89,12 @@
     document.getElementById('display').src='http://collectionimages.whitney.org/standard/'+data[i]+'/largepage.jpg';
     //document.getElementById('display').src='/img/'+data[i]+'/largepage.jpg';
     console.log(i,data[i])
-  }
+
+  };
+  //
+  // function showA(){
+  //   document.getElementById('a').style.visibility ='visible';
+  // };
   </script>
 </body>
 </html>

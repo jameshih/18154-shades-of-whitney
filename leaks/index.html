@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WhitneyLeaks</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <script>document.write("<base href=\"" + document.location + "\" />");</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <style>
+  body {
+    padding-top:50px;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+  select {
+    font-size: 24px;
+  }
+
+  td{
+    font-size: 20px;
+  }
+  </style>
+</head>
+<body class="container" ng-app="firstApp" ng-controller="mainController as main">
+  <div class="jumbotron">
+    <img src="http://whitney.org/image_columns/0062/8316/89.7_steichen_imageprimacy_520_520_740.jpg?1418320705" style="width:20%; display: block; margin: 0 auto;">
+    <div style="text-align:center;" >
+      <h1 style="text-align:center;">/WhitneyLeaks/</h1>
+      <h3 style="margin-bottom:5%;text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h2>
+        <select ng-model="selected" ng-init="selected=artists[0].name">
+          <option ng-repeat="artist in main.artists" value="{{artist.name}}">{{artist.name}}</option>
+        </select>
+        <h3 ng-repeat="artist in main.artists | filter:{'name':selected}">Total Works: {{artist.count}}</h3>
+      </div>
+    </div>
+    <div class="jumbotron">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>Title</td>
+            <td>Date</td>
+            <td>Medium</td>
+            <td>Demension</td>
+            <td>Accession</td>
+            <td>Image</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="work in main.works | filter:{'artist': selected}">
+            <td>{{work.title}}</td>
+            <td>{{work.date}}</td>
+            <td>{{work.medium}}</td>
+            <td>{{work.dimension}}</td>
+            <td>{{work.accession}}</td>
+            <td><img src="{{work.img}}" alt=""></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </html>

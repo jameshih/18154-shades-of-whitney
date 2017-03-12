@@ -16,10 +16,16 @@
   select {
     font-size: 24px;
     width:50%;
+    text-align-last:center;
   }
 
   td{
     font-size: 20px;
+  }
+
+  img{
+    width:270px; /* you can use % */
+    height: auto;
   }
   </style>
 </head>
@@ -28,36 +34,37 @@
     <img src="http://whitney.org/image_columns/0062/8316/89.7_steichen_imageprimacy_520_520_740.jpg?1418320705" style="width:20%; display: block; margin: 0 auto;">
     <div style="text-align:center;" >
       <h1 style="text-align:center;">/WhitneyLeaks/</h1>
-      <h3 style="margin-bottom:5%;text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h2>
-        <select ng-model="selected" ng-init="selected=artists[0].name">
-          <option ng-repeat="artist in main.artists" value="{{artist.name}}">{{artist.name}}</option>
-        </select>
-        <h3 ng-repeat="artist in main.artists | filter:{'name':selected}">Total Works: {{artist.count}}</h3>
-      </div>
+      <h3 style="text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h3>
+      <h3 style="margin-bottom:5%; text-align:center;">{{main.artists.length}} Artists Leaked</h3>
+      <select ng-model="selected" ng-init="selected=artists[0].name">
+        <option ng-repeat="artist in main.artists" value="{{artist.name}}">{{artist.name}}</option>
+      </select>
+      <h3 ng-repeat="artist in main.artists | filter:{'name':selected}">Total Works: {{artist.count}}</h3>
     </div>
-    <div class="jumbotron">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <td>Title</td>
-            <td>Date</td>
-            <td>Medium</td>
-            <td>Demension</td>
-            <td>Accession</td>
-            <td>Image</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="work in main.works | filter:{'artist': selected}">
-            <td>{{work.title}}</td>
-            <td>{{work.date}}</td>
-            <td>{{work.medium}}</td>
-            <td>{{work.dimension}}</td>
-            <td>{{work.accession}}</td>
-            <td><img src="{{work.img}}" alt=""></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </body>
-  </html>
+  </div>
+  <div class="jumbotron">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td>Title</td>
+          <td>Date</td>
+          <td>Medium</td>
+          <td>Demension</td>
+          <td>Accession</td>
+          <td>Image</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="work in main.works | filter:{'artist': selected}">
+          <td>{{work.title}}</td>
+          <td>{{work.date}}</td>
+          <td>{{work.medium}}</td>
+          <td>{{work.dimension}}</td>
+          <td>{{work.accession}}</td>
+          <td><img src="{{work.img}}" alt=""></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

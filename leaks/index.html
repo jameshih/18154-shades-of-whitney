@@ -37,7 +37,7 @@
       <h3 style="text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h3>
       <h3 style="margin-bottom:5%; text-align:center;">{{main.artists.length}} Artists Leaked</h3>
       <select ng-model="selected" ng-init="selected=artists[0].name">
-        <option ng-repeat="artist in main.artists" value="{{artist.name}}">{{artist.name}}</option>
+        <option ng-repeat="artist in main.artists |  orderBy:'name'" value="{{artist.name}}">{{artist.name}}</option>
       </select>
       <h3 ng-repeat="artist in main.artists | filter:{'name':selected}">Total Works: {{artist.count}}</h3>
     </div>

@@ -90,6 +90,6 @@ angular.module('firstApp', [])
 
     vm.rangeAcc = vm.maxAcc - vm.minAcc;
 
-
+console.log(vm.rangeAcc);
   });
 });

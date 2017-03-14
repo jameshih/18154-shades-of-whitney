@@ -85,6 +85,11 @@ angular.module('firstApp', [])
       vm.accCount(keyStr2[j]);
     };
 
-    
+    vm.minAcc= Math.min.apply(Math,vm.accessions.map(function(item){return item.accession;}));
+    vm.maxAcc= Math.max.apply(Math,vm.accessions.map(function(item){return item.accession;}));
+
+    vm.rangeAcc = vm.maxAcc - vm.minAcc;
+
+
   });
 });

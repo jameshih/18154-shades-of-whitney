@@ -25,6 +25,11 @@
 
   td{
     font-size: 16px;
+    text-align: center;
+  }
+
+  .table > tbody > tr > td {
+    vertical-align: middle;
   }
 
   img{
@@ -61,6 +66,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
+          <td>Id</td>
           <td>Artist</td>
           <td>Title</td>
           <td>Date</td>
@@ -72,6 +78,7 @@
       </thead>
       <tbody>
         <tr ng-repeat="work in main.works | filter:{'medium': selected}">
+          <td>{{work.id}}</td>
           <td>{{work.artist}}</td>
           <td>{{work.title}}</td>
           <td>{{work.date}}</td>

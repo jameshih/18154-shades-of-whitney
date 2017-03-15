@@ -13,7 +13,8 @@ angular.module('firstApp', [])
         accStr = "19"+accStr;
       }else if(accStr == "P"){
         accStr = data.data[k].accession.split(".")[1];
-        accStr = "19"+accStr;
+        if(accStr.length==2)accStr = "19"+accStr;
+        else accStr = accStr;
       }else {
         accStr = accStr;
       }
@@ -46,7 +47,8 @@ angular.module('firstApp', [])
     vm.dates=[],
     vm.titles=[],
     vm.mediums=[],
-    vm.dimensions=[];
+    vm.dimensions=[],
+    vm.col=0;
 
 
     //counter function
@@ -164,7 +166,7 @@ angular.module('firstApp', [])
       };
     }
 
-console.log(keyStr3);
+    console.log(keyStr3);
 
     vm.Output();
 
@@ -178,8 +180,6 @@ console.log(keyStr3);
 
     vm.rangeDate = vm.maxDate-vm.minDate;
 
-    //console.log(rangeDate);
-
-
+    console.log(keyStr3);
   });
 });

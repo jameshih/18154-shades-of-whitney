@@ -54,13 +54,15 @@
       <select ng-model="selected" ng-init="selected=artists[0].name">
         <option ng-repeat="artist in main.artists |  orderBy:'name'" value="{{artist.name}}">{{artist.name}}</option>
       </select>
-      <h3 ng-repeat="artist in main.artists | filter:{'name':selected}">Total Works: {{artist.count}}</h3>
+      <p ng-repeat="work in filtered = (main.works | filter: selected)"><h3>Total Works: {{filtered.length}}</h3></p>
     </div>
   </div>
   <div class="jumbotron">
     <table class="table table-bordered">
       <thead>
         <tr>
+          <td>Object Id</td>
+          <td>Artist</td>
           <td>Title</td>
           <td>Date</td>
           <td>Medium</td>
@@ -71,12 +73,14 @@
       </thead>
       <tbody>
         <tr ng-repeat="work in main.works | filter:{'artist': selected}">
+          <td>{{work.id}}</td>
+          <td>{{work.artist}}</td>
           <td>{{work.title}}</td>
           <td>{{work.date}}</td>
           <td>{{work.medium}}</td>
           <td>{{work.dimension}}</td>
           <td>{{work.accession}}</td>
-          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt=""></a></td>
+          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt="no img"></a></td>
         </tr>
       </tbody>
     </table>

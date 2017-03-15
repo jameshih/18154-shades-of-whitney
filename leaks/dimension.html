@@ -55,13 +55,14 @@
       <select ng-model="selected">
         <option ng-repeat="dimension in main.dimensions |  orderBy:'dimension.count'" value="{{dimension.dimension}}">{{dimension.dimension}}</option>
       </select>
-      <h3 ng-repeat="dimension in main.dimensions | filter:{'dimension':selected}">{{dimension.count}} pieces are {{selected}}</h3>
+      <p ng-repeat="work in filtered = (main.works | filter: selected)"><h3>{{filtered.length}} pieces are {{selected}}</h3></p>
     </div>
   </div>
   <div class="jumbotron">
     <table class="table table-bordered">
       <thead>
         <tr>
+          <td>Object Id</td>
           <td>Artist</td>
           <td>Title</td>
           <td>Date</td>
@@ -73,13 +74,14 @@
       </thead>
       <tbody>
         <tr ng-repeat="work in main.works | filter:{'dimension': selected}">
+          <td>{{work.id}}</td>
           <td>{{work.artist}}</td>
           <td>{{work.title}}</td>
           <td>{{work.date}}</td>
           <td>{{work.medium}}</td>
           <td>{{work.dimension}}</td>
           <td>{{work.accession}}</td>
-          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt=""></a></td>
+          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt="no img"></a></td>
         </tr>
       </tbody>
     </table>

@@ -62,6 +62,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
+          <td>Object Id</td>
           <td>Artist</td>
           <td>Title</td>
           <td>Date</td>
@@ -72,12 +73,13 @@
       </thead>
       <tbody>
         <tr ng-repeat="work in main.works | filter:{'accession': selected}">
+          <td>{{work.id}}</td>
           <td>{{work.artist}}</td>
           <td>{{work.title}}</td>
           <td>{{work.date}}</td>
           <td>{{work.medium}}</td>
           <td>{{work.dimension}}</td>
-          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt=""></a></td>
+          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt="no img"></a></td>
         </tr>
       </tbody>
     </table>

@@ -55,7 +55,7 @@
       <select ng-model="selected">
         <option ng-repeat="medium in main.mediums |  orderBy:'medium.count'" value="{{medium.medium}}">{{medium.medium}}</option>
       </select>
-      <h3 ng-repeat="medium in main.mediums | filter:{'medium':selected}">{{medium.count}} have {{selected}} in the medium</h3>
+      <p ng-repeat="work in filtered = (main.works | filter: selected)"><h3>{{filtered.length}} used {{selected}} as the medium</h3></p>
     </div>
   </div>
   <div class="jumbotron">
@@ -79,7 +79,7 @@
           <td>{{work.medium}}</td>
           <td>{{work.dimension}}</td>
           <td>{{work.accession}}</td>
-          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt=""></a></td>
+          <td><a href="http://collection.whitney.org/object/{{work.id}}"><img src="{{work.img}}" alt="no img"></a></td>
         </tr>
       </tbody>
     </table>

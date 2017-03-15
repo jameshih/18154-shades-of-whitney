@@ -180,6 +180,6 @@ angular.module('firstApp', [])
 
     vm.rangeDate = vm.maxDate-vm.minDate;
 
-    console.log(keyStr3);
+    console.log(vm.works.length);
   });
 });

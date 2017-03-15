@@ -38,10 +38,11 @@
     <div style="text-align:center;" >
       <h1 style="text-align:center;">/WhitneyLeaks/</h1>
       <h3 style="text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h3>
-      <h3 style="margin-bottom:5%; text-align:center;">{{main.artists.length}} Artists Leaked</h3>
+      <h3 style="margin-bottom:5%; text-align:center;">{{main.artists.length}} artists leaked</h3>
       <p id="p">
         <h3>Search by: </h3>
         <select id="switcher">
+          <option value="---">-Select a search mode-</option>
           <option value="artist" selected>Artist</option>
           <option value="accession">Accession Year</option>
           <option value="title">Title</option>
@@ -83,6 +84,7 @@
   <script type="text/javascript">
   $(document).ready(function() {
     $("#switcher").change(function(){
+      if ($(this).val() =='---') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/index.html";
       if ($(this).val() =='artist') window.location.href="#";
       if ($(this).val() =='accession') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/accession.html";
       if ($(this).val() =='date') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/date.html";

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>WhitneyLeaks | accession</title>
+  <title>WhitneyLeaks</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
   <script>document.write("<base href=\"" + document.location + "\" />");</script>
@@ -39,10 +39,11 @@
     <div style="text-align:center;" >
       <h1 style="text-align:center;">/WhitneyLeaks/</h1>
       <h3 style="text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h3>
-      <h3 style="margin-bottom:5%; text-align:center;">{{main.rangeAcc}} Years of Collections</h3>
+      <h3 style="margin-bottom:5%; text-align:center;">{{main.rangeAcc}} years of collections</h3>
       <p id="p">
         <h3>Search by: </h3>
         <select id="switcher">
+          <option value="---">-Select a search mode-</option>
           <option value="artist">Artist</option>
           <option value="accession" selected>Accession Year</option>
           <option value="title">Title</option>
@@ -84,6 +85,7 @@
   <script type="text/javascript">
   $(document).ready(function() {
     $("#switcher").change(function(){
+      if ($(this).val() =='---') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/index.html";
       if ($(this).val() =='artist') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/artist.html";
       if ($(this).val() =='accession') window.location.href="#";
       if ($(this).val() =='date') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/date.html";

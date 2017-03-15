@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WhitneyLeaks</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <script>document.write("<base href=\"" + document.location + "\" />");</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <style>
+  body {
+    padding-top:50px;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+  select {
+    font-size: 24px;
+    width:50%;
+    text-align-last:center;
+  }
+
+  td{
+    font-size: 16px;
+  }
+
+  img{
+    width:200px; /* you can use % */
+    height: auto;
+  }
+  </style>
+</head>
+<body class="container" ng-app="firstApp" ng-controller="mainController as main">
+  <div class="jumbotron">
+    <img src="http://whitney.org/image_columns/0062/8316/89.7_steichen_imageprimacy_520_520_740.jpg?1418320705" style="width:20%; display: block; margin: 0 auto;">
+    <div style="text-align:center;" >
+      <h1 style="text-align:center;">/WhitneyLeaks/</h1>
+      <h3 style="text-align:center;">{{main.works.length}} out of 18155 Works Leaked</h3>
+      <h3 style="text-align:center;">{{main.rangeAcc}} years of collections</h3>
+      <h3 style="text-align:center;">{{main.rangeDate}} years of works</h3>
+      <h3 style="text-align:center;">{{main.artists.length}} artists leaked</h3>
+      <h3 style="text-align:center;">{{main.titles.length}} different titles</h3>
+      <h3 style="text-align:center;">{{main.dimensions.length}} different dimensions</h3>
+      <h3 style="margin-bottom:5%; text-align:center;">{{main.mediums.length}} different mediums</h3>
+      <p id="p">
+        <select id="switcher">
+          <option value="---" selected>-Select a search mode-</option>
+          <option value="artist">Artist</option>
+          <option value="accession">Accession Year</option>
+          <option value="title">Title</option>
+          <option value="medium">Medium</option>
+          <option value="date">Creation Year</option>
+          <option value="dimension">Dimension</option>
+        </select>
+      </p>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#switcher").change(function(){
+        if ($(this).val() =='---') window.location.href="#";
+        if ($(this).val() =='artist') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/artist.html";
+        if ($(this).val() =='accession') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/accession.html";
+        if ($(this).val() =='date') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/date.html";
+        if ($(this).val() =='medium') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/medium.html";
+        if ($(this).val() =='title') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/title.html";
+        if ($(this).val() =='dimension') window.location.href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks/dimension.html";
+      });
+    });
+    </script>
+
+  </body>
+  </html>

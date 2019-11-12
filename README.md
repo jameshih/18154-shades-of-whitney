@@ -8,7 +8,7 @@
 </br>
 </br>
 <p align="center">
-Click <a href="https://jimmyadg.github.io/18154_shades_of_whitney/index.html">here</a> to get enlightened!
+Click <a href="https://jameshih.github.io/18154_shades_of_whitney/index.html">here</a> to get enlightened!
 </p>
 </br>
 </br>
@@ -17,12 +17,12 @@ Click <a href="https://jimmyadg.github.io/18154_shades_of_whitney/index.html">he
 </br>
 </br>
 <p align="center">
-<img src="https://github.com/jimmyadg/18154_shades_of_whitney/blob/master/leaks/wl1.png"/>
+<img src="https://github.com/jameshih/18154_shades_of_whitney/blob/master/leaks/wl1.png"/>
 </p>
 </br>
 </br>
 <p align="center">
-Click <a href="https://jimmyadg.github.io/18154_shades_of_whitney/leaks">here</a> to view the leaks
+Click <a href="https://jameshih.github.io/18154_shades_of_whitney/leaks">here</a> to view the leaks
 </p>
 </br>
 </br>

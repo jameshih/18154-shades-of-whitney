@@ -1,0 +1,2 @@
+    
+    ls -m >> data.txt

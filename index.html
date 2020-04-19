@@ -70,6 +70,26 @@
     <h1 id="header">18154 Shades of Whitney</h1>
     <button id="bt" onclick="postImg()">show me</button>
   </div>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290931986/in/dateposted-public/" title="1-2970">
+    <img src="" data-src="https://c1.staticflickr.com/4/3762/33290931986_6b1a8cc970_o.jpg" width="7040" height="6804" alt="1-2970">
+  </a>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517467083/in/dateposted-public/" title="2971-5940">
+    <img src="" data-src="https://c1.staticflickr.com/4/3938/32517467083_eb8dc5bdbc_o.jpg" width="7040" height="6804" alt="2971-5940">
+  </a>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517466273/in/dateposted-public/" title="5941-8910">
+    <img src="" data-src="https://c1.staticflickr.com/1/719/32517466273_9467f7dd21_o.jpg" width="7040" height="6804" alt="5941-8910">
+  </a>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517465193/in/dateposted-public/" title="8911-11880">
+    <img src="" data-src="https://c1.staticflickr.com/1/625/32517465193_2c244133a2_o.jpg" width="7040" height="6804" alt="8911-11880">
+  </a>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517464273/in/dateposted-public/" title="11881-14850">
+    <img src="" data-src="https://c1.staticflickr.com/4/3923/32517464273_510209d629_o.jpg" width="7040" height="6804" alt="11881-14850">
+  </a>
+  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290928526/in/dateposted-public/" title="14851-17820">
+    <img src="" data-src="https://c1.staticflickr.com/4/3913/33290928526_a1b7a313e6_o.jpg" width="7040" height="6804" alt="14851-17820">
+  </a>
+  
+  <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <script type="text/javascript">
   document.getElementById('header').innerHTML = data.length + ' Shades of Whitney';
   document.getElementById('bt').innerHTML = 'Show me';
@@ -88,11 +108,15 @@
   //   document.getElementById('a').style.visibility ='visible';
   // };
   </script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290931986/in/dateposted-public/" title="1-2970"><img src="https://c1.staticflickr.com/4/3762/33290931986_6b1a8cc970_o.jpg" width="7040" height="6804" alt="1-2970"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517467083/in/dateposted-public/" title="2971-5940"><img src="https://c1.staticflickr.com/4/3938/32517467083_eb8dc5bdbc_o.jpg" width="7040" height="6804" alt="2971-5940"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517466273/in/dateposted-public/" title="5941-8910"><img src="https://c1.staticflickr.com/1/719/32517466273_9467f7dd21_o.jpg" width="7040" height="6804" alt="5941-8910"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517465193/in/dateposted-public/" title="8911-11880"><img src="https://c1.staticflickr.com/1/625/32517465193_2c244133a2_o.jpg" width="7040" height="6804" alt="8911-11880"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/32517464273/in/dateposted-public/" title="11881-14850"><img src="https://c1.staticflickr.com/4/3923/32517464273_510209d629_o.jpg" width="7040" height="6804" alt="11881-14850"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  <a id ="a" data-flickr-embed="true"  href="https://www.flickr.com/photos/jamoshi/33290928526/in/dateposted-public/" title="14851-17820"><img src="https://c1.staticflickr.com/4/3913/33290928526_a1b7a313e6_o.jpg" width="7040" height="6804" alt="14851-17820"></a><script src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <script>
+  window.addEventListener('load', function(){
+    var allimages= document.getElementsByTagName('img');
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
+}, false)
+</script>
 </body>
 </html>

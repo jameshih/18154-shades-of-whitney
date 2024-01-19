@@ -8,7 +8,7 @@
 </br>
 </br>
 <p align="center">
-Click <a href="https://jameshih.github.io/18154_shades_of_whitney/index.html">here</a> to get enlightened!
+Click <a href="https://shih.app/18154-shades-of-whitney/index.html">here</a> to get enlightened!
 </p>
 </br>
 </br>

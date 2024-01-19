@@ -22,7 +22,7 @@ Click <a href="https://shih.app/18154-shades-of-whitney/index.html">here</a> to 
 </br>
 </br>
 <p align="center">
-Click <a href="https://jameshih.github.io/18154_shades_of_whitney/leaks">here</a> to view the leaks
+Click <a href="https://shih.app/18154-shades-of-whitney/leaks">here</a> to view the leaks
 </p>
 </br>
 </br>

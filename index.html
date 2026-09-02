@@ -52,19 +52,18 @@
 
   </style>
 </head>
-<body onscroll="showA()">
+<body>
   <div>
     <h1 id="header">18154 Shades of Whitney</h1>
     <button id="bt" onclick="postImg()">show me</button>
   </div>
-    <img src="" data-src="https://c1.staticflickr.com/4/3762/33290931986_6b1a8cc970_o.jpg" width="7040" height="6804" alt="1-2970">
-    <img src="" data-src="https://c1.staticflickr.com/4/3938/32517467083_eb8dc5bdbc_o.jpg" width="7040" height="6804" alt="2971-5940">
-    <img src="" data-src="https://c1.staticflickr.com/1/719/32517466273_9467f7dd21_o.jpg" width="7040" height="6804" alt="5941-8910">
-    <img src="" data-src="https://c1.staticflickr.com/1/625/32517465193_2c244133a2_o.jpg" width="7040" height="6804" alt="8911-11880">
-    <img src="" data-src="https://c1.staticflickr.com/4/3923/32517464273_510209d629_o.jpg" width="7040" height="6804" alt="11881-14850">
-    <img src="" data-src="https://c1.staticflickr.com/4/3913/33290928526_a1b7a313e6_o.jpg" width="7040" height="6804" alt="14851-17820"
-  
-  <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    <img src="./assets/catalogue/1-2970.jpg" width="7040" height="6804" alt="1-2970" loading="eager" fetchpriority="high" decoding="async">
+    <img src="./assets/catalogue/2971-5940.jpg" width="7040" height="6804" alt="2971-5940" loading="lazy" fetchpriority="low" decoding="async">
+    <img src="./assets/catalogue/5941-8910.jpg" width="7040" height="6804" alt="5941-8910" loading="lazy" fetchpriority="low" decoding="async">
+    <img src="./assets/catalogue/8911-11880.jpg" width="7040" height="6804" alt="8911-11880" loading="lazy" fetchpriority="low" decoding="async">
+    <img src="./assets/catalogue/11881-14850.jpg" width="7040" height="6804" alt="11881-14850" loading="lazy" fetchpriority="low" decoding="async">
+    <img src="./assets/catalogue/14851-17820.jpg" width="7040" height="6804" alt="14851-17820" loading="lazy" fetchpriority="low" decoding="async">
+
   <script type="text/javascript">
   document.getElementById('header').innerHTML = data.length + ' Shades of Whitney';
   document.getElementById('bt').innerHTML = 'Show me';
@@ -78,20 +77,6 @@
     console.log(i,data[i])
 
   };
-  //
-  // function showA(){
-  //   document.getElementById('a').style.visibility ='visible';
-  // };
   </script>
-  <script>
-  window.addEventListener('load', function(){
-    var allimages= document.getElementsByTagName('img');
-    for (var i=0; i<allimages.length; i++) {
-        if (allimages[i].getAttribute('data-src')) {
-            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
-        }
-    }
-}, false)
-</script>
 </body>
 </html>

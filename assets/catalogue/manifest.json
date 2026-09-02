@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "width": 7040,
+  "height": 6804,
+  "sheets": [
+    {
+      "range": "1-2970",
+      "filename": "1-2970.jpg",
+      "sourceUrl": "https://live.staticflickr.com/3762/33290931986_6b1a8cc970_o.jpg",
+      "sourceBytes": 14619520,
+      "sourceSha256": "b36c8afa92b708abaf8e4977ba48e666c77bf5496f6462c219b1c36a4395916a",
+      "publishedBytes": 14120256,
+      "publishedSha256": "1b09c1c51ba8da977a9ebc4b23d9538061cdf84ca23784dfb1948971321d0892",
+      "decodedFrameMd5": "886cdd013577cc8f50416cccee43e265"
+    },
+    {
+      "range": "2971-5940",
+      "filename": "2971-5940.jpg",
+      "sourceUrl": "https://live.staticflickr.com/3938/32517467083_eb8dc5bdbc_o.jpg",
+      "sourceBytes": 15450552,
+      "sourceSha256": "25b5cb59719ab104a5ebc14e2a70b9fd8d8f32f8aca9a423d069df6600836742",
+      "publishedBytes": 14855380,
+      "publishedSha256": "3acaa44b036cfe1b0e3e1a22ab1c9b6f556d91f1dbe47f73dc3aa808ad182698",
+      "decodedFrameMd5": "e996af3173c5943a1e794c1bbd50a55d"
+    },
+    {
+      "range": "5941-8910",
+      "filename": "5941-8910.jpg",
+      "sourceUrl": "https://live.staticflickr.com/719/32517466273_9467f7dd21_o.jpg",
+      "sourceBytes": 16770620,
+      "sourceSha256": "548b4bfa155204e2d1d3ec6bb7970af5276d59c8b37bf15eb7f314afe639e82f",
+      "publishedBytes": 16033700,
+      "publishedSha256": "42aaa6afbbbdfe22121b70448308d29af9b04512d8a4e281eb579aa1becde003",
+      "decodedFrameMd5": "18534a0283e199ef874aa5e6e9eafd60"
+    },
+    {
+      "range": "8911-11880",
+      "filename": "8911-11880.jpg",
+      "sourceUrl": "https://live.staticflickr.com/625/32517465193_2c244133a2_o.jpg",
+      "sourceBytes": 18711998,
+      "sourceSha256": "7576a74748e73ca387bd8d85873695c765c32617a451f0b755384077786cc62d",
+      "publishedBytes": 17857444,
+      "publishedSha256": "953f759a298864da528af80a0b8284fe3febdbb5d37f65539c5dfaeb6ab9ac03",
+      "decodedFrameMd5": "88b935c772ae08164383ab906006c71a"
+    },
+    {
+      "range": "11881-14850",
+      "filename": "11881-14850.jpg",
+      "sourceUrl": "https://live.staticflickr.com/3923/32517464273_510209d629_o.jpg",
+      "sourceBytes": 14902519,
+      "sourceSha256": "00af482bfa594306fd255bb598c64742c52d6d75287f2e552030bd2817786321",
+      "publishedBytes": 14294155,
+      "publishedSha256": "7d7b8f5286d34fe9f18c4d8bdb2bcdc8e4fe9724aca91113b24dd490261d0890",
+      "decodedFrameMd5": "e34eb2bcf0e5f7f06efb5b1bc39ef18b"
+    },
+    {
+      "range": "14851-17820",
+      "filename": "14851-17820.jpg",
+      "sourceUrl": "https://live.staticflickr.com/3913/33290928526_a1b7a313e6_o.jpg",
+      "sourceBytes": 15601217,
+      "sourceSha256": "577f65ec6e6a6c148611365e9202452194c2b6a45b2215d6e1fa6a6813b57a23",
+      "publishedBytes": 15018895,
+      "publishedSha256": "fc2ad4c7b10eab18a2ec7ce1d8f877b881c7ac7e247553ee96d14094c1ced7a1",
+      "decodedFrameMd5": "56f92842180c245634c48d7c366b5201"
+    }
+  ]
+}

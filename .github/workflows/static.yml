@@ -6,6 +6,10 @@ on:
   push:
     branches: ["master"]
 
+  # Verifies changes before they can be merged.
+  pull_request:
+    branches: ["master"]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -30,14 +34,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+      - name: Verify catalogue assets
+        run: node scripts/verify-catalogue-assets.mjs
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
         with:
           # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v5
